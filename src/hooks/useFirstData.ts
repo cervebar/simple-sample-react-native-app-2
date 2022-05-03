@@ -1,4 +1,4 @@
-import {ItemT} from '../../types/ItemT';
+import {ItemT} from '../types/ItemT';
 import useMyState from './useMyState';
 import {useMemo} from 'react';
 

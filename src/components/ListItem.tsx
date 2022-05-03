@@ -1,8 +1,8 @@
 import React from 'react';
 import {Button, Text} from 'react-native';
-import {ItemT} from '../../types/ItemT';
+import {ItemT} from '../types/ItemT';
 import {useDispatch} from 'react-redux';
-import {removeFromFirstStore} from '../slices/firstSlice';
+import {removeFromFirstStore} from '../redux/slices/firstSlice';
 
 export type ListItemProps = {
   data: ItemT;

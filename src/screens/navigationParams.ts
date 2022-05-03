@@ -5,11 +5,13 @@ import {Screen2NavigationProps} from './Screen2';
 export const RouteHome = 'RouteHome';
 export const RouteScreen2 = 'RouteScreen2';
 export const RouteScreen3 = 'RouteScreen3';
+export const RouteScreen4 = 'RouteScreen4';
 
 export type RootStackParamList = {
   RouteHome: undefined;
   RouteScreen2: Screen2NavigationProps;
   RouteScreen3: undefined;
+  RouteScreen4: undefined;
 };
 
 export type NavigationProps = StackNavigationProp<RootStackParamList>;

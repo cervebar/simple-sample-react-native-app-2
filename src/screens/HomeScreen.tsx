@@ -8,7 +8,12 @@ import {
   Button,
 } from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {NavigationProps, RouteScreen2, RouteScreen3} from './navigationParams';
+import {
+  NavigationProps,
+  RouteScreen2,
+  RouteScreen3,
+  RouteScreen4,
+} from './navigationParams';
 import {useNavigation} from '@react-navigation/native';
 
 export const HomeScreen = () => {
@@ -31,6 +36,10 @@ export const HomeScreen = () => {
           <Button
             title={'go to screen 3 for redux'}
             onPress={() => nav.navigate(RouteScreen3)}
+          />
+          <Button
+            title={'go to screen 4 API call'}
+            onPress={() => nav.navigate(RouteScreen4)}
           />
         </View>
       </SafeAreaView>
