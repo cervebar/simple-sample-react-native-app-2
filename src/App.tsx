@@ -1,6 +1,6 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, View, Text, StatusBar } from 'react-native';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import {SafeAreaView, StyleSheet, View, Text, StatusBar} from 'react-native';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 const App = () => {
   return (
