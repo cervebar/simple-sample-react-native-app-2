@@ -1,9 +1,10 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {RouteHome, RouteScreen2} from './navigationParams';
+import {RouteHome, RouteScreen2, RouteScreen3} from './navigationParams';
 import {HomeScreen} from './HomeScreen';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Screen2} from './Screen2';
+import {Screen3} from './Screen3';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,7 +32,14 @@ export const StackNavigation = () => {
           name={RouteScreen2}
           component={Screen2}
           options={{
-            headerTitle: 'Screen 2',
+            headerTitle: 'Screen 2 - params',
+          }}
+        />
+        <Stack.Screen
+          name={RouteScreen3}
+          component={Screen3}
+          options={{
+            headerTitle: 'Screen 3 - redux',
           }}
         />
       </Stack.Navigator>
