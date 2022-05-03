@@ -54,3 +54,27 @@ watchman watch-del-all && rm -rf node_modules/ && yarn cache clean && yarn insta
 - added Redux toolikt
 - added redux persist
 - added theme
+
+
+# TODO
+1) better fix of ( `Argument of type 'AsyncThunkAction<any, void, {}>' is not assignable to parameter of type 'AnyAction'`)
+- currently solved with TS-ignore
+
+Can be solved also like this:
+```javascript
+const mapDispatchToProps = (
+  dispatch: ThunkDispatch<RootStateType, void, Action>,
+) => {
+  return {
+    onFetchSecondData: () => dispatch(fetchDataSecond()),
+  };
+};
+
+... then in Component
+useEffect(() => {
+    if (fetchStatus === 'idle') {
+    const kvak = mapDispatchToProps(dispatch);
+    kvak.onFetchSecondData();
+```
+
+see: [stackoverflow 1](https://stackoverflow.com/questions/70143816/argument-of-type-asyncthunkactionany-void-is-not-assignable-to-paramete)

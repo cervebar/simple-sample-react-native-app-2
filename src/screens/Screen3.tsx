@@ -1,7 +1,7 @@
 import React from 'react';
 import {Button, FlatList, Text} from 'react-native';
-import {ListItem} from '../redux/components/ListItem';
-import {useFirstData} from '../redux/hooks/useFirstData';
+import {ListItem} from '../components/ListItem';
+import {useFirstData} from '../hooks/useFirstData';
 import {useDispatch} from 'react-redux';
 import {addToFirstStore} from '../redux/slices/firstSlice';
 

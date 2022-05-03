@@ -1,5 +1,5 @@
 import {useSelector} from 'react-redux';
-import {RootStateType} from '../../redux/rootStateType';
+import {RootStateType} from '../redux/RootStateType';
 
 /**
  * helper to use shorten useMyState hook without need of redux store type declaration
