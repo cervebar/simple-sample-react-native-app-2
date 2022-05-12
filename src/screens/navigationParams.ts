@@ -11,6 +11,7 @@ export const RouteScreen6 = 'RouteScreen6';
 export const RouteScreen7 = 'RouteScreen7';
 export const RouteScreen8 = 'RouteScreen8';
 export const RouteScreen9 = 'RouteScreen9';
+export const RouteScreen10 = 'RouteScreen10';
 
 export type RootStackParamList = {
   RouteHome: undefined;
@@ -22,6 +23,7 @@ export type RootStackParamList = {
   RouteScreen7: undefined;
   RouteScreen8: undefined;
   RouteScreen9: undefined;
+  RouteScreen10: undefined;
 };
 
 export type NavigationProps = StackNavigationProp<RootStackParamList>;

@@ -2,6 +2,7 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {
   RouteHome,
+  RouteScreen10,
   RouteScreen2,
   RouteScreen3,
   RouteScreen4,
@@ -21,6 +22,7 @@ import {Screen6} from './Screen6';
 import {Screen7} from './Screen7';
 import {Screen8} from './Screen8';
 import {Screen9} from './Screen9';
+import {Screen10} from './Screen10';
 
 const Stack = createNativeStackNavigator();
 
@@ -98,6 +100,13 @@ export const StackNavigation = () => {
           component={Screen9}
           options={{
             headerTitle: 'Screen 9 - useCallback, useMemo, memo',
+          }}
+        />
+        <Stack.Screen
+          name={RouteScreen10}
+          component={Screen10}
+          options={{
+            headerTitle: 'Screen 10 - useImperativeHandle',
           }}
         />
       </Stack.Navigator>

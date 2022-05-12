@@ -10,6 +10,7 @@ import {
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {
   NavigationProps,
+  RouteScreen10,
   RouteScreen2,
   RouteScreen3,
   RouteScreen4,
@@ -65,6 +66,10 @@ export const HomeScreen = () => {
           <Button
             title={'go to screen 9: useCallbck, useMemo, memo '}
             onPress={() => nav.navigate(RouteScreen9)}
+          />
+          <Button
+            title={'go to screen 10: useImperativeHandle '}
+            onPress={() => nav.navigate(RouteScreen10)}
           />
         </View>
       </SafeAreaView>
