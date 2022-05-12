@@ -14,6 +14,7 @@ import {
   RouteScreen3,
   RouteScreen4,
   RouteScreen5,
+  RouteScreen6,
 } from './navigationParams';
 import {useNavigation} from '@react-navigation/native';
 
@@ -43,8 +44,12 @@ export const HomeScreen = () => {
             onPress={() => nav.navigate(RouteScreen4)}
           />
           <Button
-            title={'go to screen 5: timer, interval, useEffect'}
+            title={'go to screen 5: timer, useEffect & ref'}
             onPress={() => nav.navigate(RouteScreen5)}
+          />
+          <Button
+            title={'go to screen 6: timer 2 '}
+            onPress={() => nav.navigate(RouteScreen6)}
           />
         </View>
       </SafeAreaView>
