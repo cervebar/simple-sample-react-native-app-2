@@ -1,38 +1,69 @@
-import React, {ForwardedRef, ReactElement, useRef} from 'react';
-import {Button, Text, TextInput} from 'react-native';
+import React, {
+  ForwardedRef,
+  ReactElement,
+  useImperativeHandle,
+  useRef,
+} from 'react';
+import {Button, StyleSheet, Text, TextInput} from 'react-native';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 interface InputWrapperT {
-  title: string;
+  type: string;
   children: ReactElement;
 }
 
 const InputWrapper = React.forwardRef<any, InputWrapperT>((props, ref) => {
+  const textInputRef = useRef<any>();
+  useImperativeHandle(
+    ref,
+    () => {
+      return {
+        validate: () => {
+          if (props.type === 'phone') {
+            console.log('validation phone');
+            if (Math.random() < 0.5) {
+              // valid
+              textInputRef.current.setNativeProps({
+                borderColor: 'green',
+                borderWidth: 1,
+              });
+            } else {
+              // not valid
+              textInputRef.current.setNativeProps({
+                borderColor: 'red',
+                borderWidth: 1,
+              });
+            }
+          }
+        },
+      };
+    },
+    [props.type],
+  );
+
   return (
     <>
-      <Text>{props.title}</Text>
+      <Text>{props.type}</Text>
       {props.children}
-      <TextInput ref={ref} />
+      <TextInput ref={textInputRef} />
     </>
   );
 });
 
 /**
- *
+ * useImperativeHandle
  */
 export const Screen10 = () => {
-  const inputRef = useRef<any>();
-  const focusInput = () => {
-    inputRef.current.focus();
-  };
-  const blurInput = () => {
-    inputRef.current.blur();
+  const phoneRef = useRef<any>();
+
+  const validateAll = () => {
+    phoneRef.current.validate();
   };
 
   return (
     <>
-      <Button title="focus input" onPress={focusInput} />
-      <Button title="blur input" onPress={blurInput} />
-      <InputWrapper ref={inputRef} title="kvak">
+      <Button title="validate all" onPress={validateAll} />
+      <InputWrapper ref={phoneRef} type="phone">
         <Text>some children</Text>
       </InputWrapper>
     </>
