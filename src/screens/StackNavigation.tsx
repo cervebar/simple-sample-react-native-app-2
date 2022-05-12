@@ -5,12 +5,14 @@ import {
   RouteScreen2,
   RouteScreen3,
   RouteScreen4,
+  RouteScreen5,
 } from './navigationParams';
 import {HomeScreen} from './HomeScreen';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Screen2} from './Screen2';
 import {Screen3} from './Screen3';
 import {Screen4} from './Screen4';
+import {Screen5} from './Screen5';
 
 const Stack = createNativeStackNavigator();
 
@@ -53,6 +55,13 @@ export const StackNavigation = () => {
           component={Screen4}
           options={{
             headerTitle: 'Screen 4 - API call with thunk',
+          }}
+        />
+        <Stack.Screen
+          name={RouteScreen5}
+          component={Screen5}
+          options={{
+            headerTitle: 'Screen 5 - use timer',
           }}
         />
       </Stack.Navigator>

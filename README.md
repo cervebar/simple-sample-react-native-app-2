@@ -48,12 +48,13 @@ clear all and do fresh build:
 watchman watch-del-all && rm -rf node_modules/ && yarn cache clean && yarn install && yarn start --reset-cache
 ```
 
-## info
-- updated Typescript
-- added navigation
-- added Redux toolikt
-- added redux persist
-- added theme
+# learning
+
+## Profiling
+Standalone React dev tools:
+
+`yarn global add react-devtools`
+
 
 
 # TODO
