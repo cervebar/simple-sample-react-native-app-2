@@ -9,6 +9,7 @@ import {
   RouteScreen6,
   RouteScreen7,
   RouteScreen8,
+  RouteScreen9,
 } from './navigationParams';
 import {HomeScreen} from './HomeScreen';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -19,6 +20,7 @@ import {Screen5} from './Screen5';
 import {Screen6} from './Screen6';
 import {Screen7} from './Screen7';
 import {Screen8} from './Screen8';
+import {Screen9} from './Screen9';
 
 const Stack = createNativeStackNavigator();
 
@@ -89,6 +91,13 @@ export const StackNavigation = () => {
           component={Screen8}
           options={{
             headerTitle: 'Screen 8 - refs',
+          }}
+        />
+        <Stack.Screen
+          name={RouteScreen9}
+          component={Screen9}
+          options={{
+            headerTitle: 'Screen 9 - useCallback, useMemo, memo',
           }}
         />
       </Stack.Navigator>
