@@ -8,6 +8,7 @@ import {
   RouteScreen5,
   RouteScreen6,
   RouteScreen7,
+  RouteScreen8,
 } from './navigationParams';
 import {HomeScreen} from './HomeScreen';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -17,6 +18,7 @@ import {Screen4} from './Screen4';
 import {Screen5} from './Screen5';
 import {Screen6} from './Screen6';
 import {Screen7} from './Screen7';
+import {Screen8} from './Screen8';
 
 const Stack = createNativeStackNavigator();
 
@@ -80,6 +82,13 @@ export const StackNavigation = () => {
           component={Screen7}
           options={{
             headerTitle: 'Screen 7 - cleanup after fetch',
+          }}
+        />
+        <Stack.Screen
+          name={RouteScreen8}
+          component={Screen8}
+          options={{
+            headerTitle: 'Screen 8 - refs',
           }}
         />
       </Stack.Navigator>
