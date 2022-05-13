@@ -3,6 +3,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {
   RouteHome,
   RouteScreen10,
+  RouteScreen11,
+  RouteScreen11a,
   RouteScreen2,
   RouteScreen3,
   RouteScreen4,
@@ -23,6 +25,8 @@ import {Screen7} from './Screen7';
 import {Screen8} from './Screen8';
 import {Screen9} from './Screen9';
 import {Screen10} from './Screen10';
+import {Screen11} from './Screen11';
+import {Test1} from '../components/profiling/Test1';
 
 const Stack = createNativeStackNavigator();
 
@@ -107,6 +111,20 @@ export const StackNavigation = () => {
           component={Screen10}
           options={{
             headerTitle: 'Screen 10 - useImperativeHandle',
+          }}
+        />
+        <Stack.Screen
+          name={RouteScreen11}
+          component={Screen11}
+          options={{
+            headerTitle: 'Screen 11 - profiling',
+          }}
+        />
+        <Stack.Screen
+          name={RouteScreen11a}
+          component={Test1}
+          options={{
+            headerTitle: 'Screen 11 - profiling A',
           }}
         />
       </Stack.Navigator>
