@@ -27,6 +27,7 @@ export const Every5Seconds = () => {
       {isVisible && (
         <Text>{`component mounted before: ${fromMoutSecRef.current} seconds`}</Text>
       )}
+      {!isVisible && <Text>not visible</Text>}
     </>
   );
 };
