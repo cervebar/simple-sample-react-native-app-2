@@ -12,7 +12,7 @@ const isNumeric = (value: string) => {
   return /^\d+$/.test(value);
 };
 
-export const InputAndInterval = () => {
+export const StartStop1 = () => {
   const [count, setCount] = useState<number>(0);
   const [delay, setDelay] = useState<number>(1000);
   const [delayInput, setDelayIpnut] = useState<number>(1000);
