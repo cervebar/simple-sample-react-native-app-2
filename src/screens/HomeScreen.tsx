@@ -12,6 +12,7 @@ import {
   NavigationProps,
   RouteScreen10,
   RouteScreen11,
+  RouteScreen12Context,
   RouteScreen2,
   RouteScreen3,
   RouteScreen4,
@@ -75,6 +76,10 @@ export const HomeScreen = () => {
           <Button
             title={'go to screen 11: profiling examples '}
             onPress={() => nav.navigate(RouteScreen11)}
+          />
+          <Button
+            title={'context '}
+            onPress={() => nav.navigate(RouteScreen12Context)}
           />
         </View>
       </SafeAreaView>

@@ -13,6 +13,7 @@ import {
   RouteScreen7,
   RouteScreen8,
   RouteScreen9,
+  RouteScreen12Context,
 } from './navigationParams';
 import {HomeScreen} from './HomeScreen';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -27,6 +28,7 @@ import {Screen9} from './Screen9';
 import {Screen10} from './Screen10';
 import {Screen11} from './Screen11';
 import {Test1} from '../components/profiling/Test1';
+import {Screen12Context} from './Screen12Context';
 
 const Stack = createNativeStackNavigator();
 
@@ -125,6 +127,13 @@ export const StackNavigation = () => {
           component={Test1}
           options={{
             headerTitle: 'Screen 11 - profiling A',
+          }}
+        />
+        <Stack.Screen
+          name={RouteScreen12Context}
+          component={Screen12Context}
+          options={{
+            headerTitle: 'Screen 12 - context',
           }}
         />
       </Stack.Navigator>

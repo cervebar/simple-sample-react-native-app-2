@@ -1,5 +1,5 @@
 # Simple sample react native app
-Very simple app for interview purpose.
+Very simple app for learning purpose.
 
 ## specification
 

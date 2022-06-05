@@ -15,6 +15,7 @@ export const RouteScreen10 = 'RouteScreen10';
 export const RouteScreen11 = 'RouteScreen11';
 export const RouteScreen11a = 'RouteScreen11a';
 export const RouteScreen11b = 'RouteScreen11b';
+export const RouteScreen12Context = 'RouteScreen12Context';
 
 export type RootStackParamList = {
   RouteHome: undefined;
@@ -30,9 +31,29 @@ export type RootStackParamList = {
   RouteScreen11: undefined;
   RouteScreen11a: undefined;
   RouteScreen11b: undefined;
+  RouteScreen12Context: undefined;
 };
 
-export type NavigationProps = StackNavigationProp<RootStackParamList>;
+export type RouteNames =
+  | 'RouteHome'
+  | 'RouteScreen2'
+  | 'RouteScreen3'
+  | 'RouteScreen4'
+  | 'RouteScreen5'
+  | 'RouteScreen6'
+  | 'RouteScreen7'
+  | 'RouteScreen8'
+  | 'RouteScreen9'
+  | 'RouteScreen10'
+  | 'RouteScreen11'
+  | 'RouteScreen11a'
+  | 'RouteScreen11b'
+  | 'RouteScreen12Context';
+
+export type NavigationProps = StackNavigationProp<
+  RootStackParamList,
+  RouteNames
+>;
 
 // use with hook for routes:  const route = useRoute<RootRouteProps<'RouteDetail'>>();
 export type RootRouteProps<RouteName extends keyof RootStackParamList> =
